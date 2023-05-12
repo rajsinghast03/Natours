@@ -18,6 +18,7 @@
 0-600px : Phone
 600-900px : Tablet Portrait
 900-1200px : Tablet Landscape
+1200-1413px : Popup
 (1200-1800px) is where our normal styles applies
 1800px + : Big Desktops
 */
@@ -27,6 +28,7 @@ $brekpoint arguement choices:
 -phones
 -tab-port
 -tab-land
+-popup
 -big-desktop
 */
 // Order : Base + typography > general layout + grid > page layout > components
@@ -48,6 +50,12 @@ $brekpoint arguement choices:
   @if $breakpoint == tab-land {
     @media (max-width: 75em) {
       //1200px
+      @content;
+    }
+  }
+  @if $breakpoint == popup {
+    @media (max-width: 88.3125em) {
+      //1413px
       @content;
     }
   }

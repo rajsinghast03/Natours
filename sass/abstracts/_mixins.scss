@@ -42,7 +42,7 @@ $brekpoint arguement choices:
     }
   }
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       //900px
       @content;
     }
